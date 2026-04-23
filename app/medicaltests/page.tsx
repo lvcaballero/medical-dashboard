@@ -40,7 +40,7 @@ export default async function MedicalTestsPage() {
             </tr>
           </thead>
           <tbody>
-            {tests.map((test) => (
+            {tests.map((test: any) => (
               <tr key={test.id} className="hover:bg-gray-50">
                 <td className="border border-gray-300 p-3 font-medium">{test.name}</td>
                 <td className="border border-gray-300 p-3">{test.category_name}</td>
