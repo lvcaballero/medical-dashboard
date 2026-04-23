@@ -1,6 +1,8 @@
 import { db } from "@/lib/db"; 
 import ExportButtons from "@/components/ExportButtons";
 
+export const dynamic = "force-dynamic";
+
 // This function fulfills your SQL JOIN requirement
 async function getMedicalTests() {
   const data = await db.query(`

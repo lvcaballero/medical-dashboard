@@ -1,5 +1,7 @@
 import { db } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export default async function UnitsPage() {
   const data = await db.query("SELECT * FROM uom ORDER BY name ASC");
   const units = data.rows;

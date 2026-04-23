@@ -1,5 +1,7 @@
 import { db } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export default async function CategoriesPage() {
   const data = await db.query("SELECT * FROM testcategories ORDER BY name ASC");
   const categories = data.rows;
