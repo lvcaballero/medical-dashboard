@@ -1,4 +1,3 @@
-// app/categories/page.tsx
 import { db } from "@/lib/db";
 
 export default async function CategoriesPage() {
@@ -16,7 +15,7 @@ export default async function CategoriesPage() {
           </tr>
         </thead>
         <tbody>
-          {categories.map((cat) => (
+          {categories.map((cat: any) => ( // Added : any here
             <tr key={cat.id} className="hover:bg-gray-50 italic">
               <td className="border p-3 font-bold text-green-900">{cat.name}</td>
               <td className="border p-3">{cat.description}</td>

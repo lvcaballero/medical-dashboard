@@ -1,4 +1,3 @@
-// app/units/page.tsx
 import { db } from "@/lib/db";
 
 export default async function UnitsPage() {
@@ -16,7 +15,7 @@ export default async function UnitsPage() {
           </tr>
         </thead>
         <tbody>
-          {units.map((unit) => (
+          {units.map((unit: any) => ( // Added : any here
             <tr key={unit.id} className="hover:bg-gray-50">
               <td className="border p-3 font-bold text-purple-900">{unit.name}</td>
               <td className="border p-3">{unit.description}</td>
